@@ -9,6 +9,8 @@ services:
       REDIS_PASSWORD: ChilliSauce123@
     volumes:
       - redis-data:/data
+      - redis-data/redis-stack.conf:/etc/redis-stack.conf
+    command: ["redis-server", "/etc/redis-stack.conf"]
 
   redisinsight:
     image: redis/redisinsight:latest
