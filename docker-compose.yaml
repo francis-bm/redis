@@ -10,7 +10,7 @@ services:
     volumes:
       - redis-data:/data
       - ./redis-stack.conf:/etc/redis-stack.conf 
-    command: ["redis-server", "/etc/redis-stack.conf"]
+    command: ["redis-stack-server", "/etc/redis-stack.conf"]
 
   redisinsight:
     image: redis/redisinsight:latest
